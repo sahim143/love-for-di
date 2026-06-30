@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Di ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+height:100vh;
+overflow:hidden;
+background:linear-gradient(to bottom,#020111,#0d1b3d,#29143d);
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+animation:move 80s linear infinite;
+opacity:.4;
+}
+
+@keyframes move{
+from{background-position:0 0;}
+to{background-position:1000px 1000px;}
+}
+
+.card{
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.2);
+border-radius:25px;
+padding:40px;
+text-align:center;
+box-shadow:0 0 40px rgba(255,0,100,.2);
+z-index:2;
+}
+
+h1{
+font-family:'Dancing Script',cursive;
+font-size:55px;
+color:#ffb6d5;
+margin-bottom:15px;
+}
+
+h2{
+font-size:22px;
+margin-bottom:25px;
+color:#ffdbe9;
+}
+
+p{
+line-height:1.9;
+font-size:18px;
+color:#f4f4f4;
+}
+
+.signature{
+margin-top:30px;
+font-family:'Dancing Script',cursive;
+font-size:38px;
+color:#ff7eb3;
+}
+
+button{
+margin-top:30px;
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:#ff4f88;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff2f70;
+}
+
+.heart{
+position:absolute;
+bottom:-30px;
+color:#ff4d88;
+font-size:20px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) scale(.5);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-110vh) scale(1.5);
+opacity:0;
+}
+}
+
+#message{
+margin-top:20px;
+font-size:22px;
+color:#ffd6e7;
+display:none;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+
+<h1>To My Dearest Di ❤️</h1>
+
+<h2>From Your Da – Sachin Gowda</h2>
+
+<p>
+
+My Dearest <b>Himarashmi</b>,
+
+<br><br>
+
+Every day with you feels like a beautiful dream that I never want to wake up from.
+Your smile lights up my darkest days, your voice calms every storm inside me, and your love has become the most precious part of my life.
+
+<br><br>
+
+No matter where life takes us, I promise to stand beside you, hold your hand through every happiness and every challenge, and love you with all my heart.
+
+<br><br>
+
+You are my peace, my happiness, my best friend, and the greatest blessing I have ever received.
+
+<br><br>
+
+I don't need the whole world because my world begins and ends with you.
+
+<br><br>
+
+I love you today, tomorrow, forever, and beyond.
+
+❤️ Forever Yours ❤️
+
+</p>
+
+<div class="signature">
+— Your Da 💖
+</div>
+
+<button onclick="showLove()">
+Click Here, Di ❤️
+</button>
+
+<div id="message">
+💖 I Love You Infinite Times, Di 💖
+</div>
+
+</div>
+
+<script>
+function showLove(){
+document.getElementById("message").style.display="block";
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+heart.style.fontSize=(Math.random()*20+15)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
